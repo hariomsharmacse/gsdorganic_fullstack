@@ -14,7 +14,7 @@ const Add = ({ token }) => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("Men");
-  const [subcategory, setSubcategory] = useState("Topwear");
+  // const [subcategory, setSubcategory] = useState("Topwear");
   const [bestseller, setBestseller] = useState(false);
   const [sizes, setSizes] = useState([]);
 
@@ -26,7 +26,7 @@ const Add = ({ token }) => {
       formData.append("description", description);
       formData.append("price", price);
       formData.append("category", category);
-      formData.append("subcategory", subcategory);
+      // formData.append("subcategory", subcategory);
       formData.append("bestseller", bestseller);
       formData.append("sizes", JSON.stringify(sizes));
 
@@ -153,12 +153,12 @@ const Add = ({ token }) => {
             onChange={(e) => setCategory(e.target.value)}
             className="w-full px-3 py-2"
           >
-            <option value="Men">Men</option>
-            <option value="Women">Women</option>
-            <option value="Kids">Kids</option>
+            <option value="Vermicompost">Vermicompost</option>
+            <option value="Sieving-Machine">Sieving-Machine</option>
+            <option value="Grinding-Machine">Grinding-Machine</option>
           </select>
         </div>
-        <div>
+        {/* <div>
           <p className="mb-2">Sub category</p>
           <select
             onChange={(e) => setSubcategory(e.target.value)}
@@ -168,7 +168,7 @@ const Add = ({ token }) => {
             <option value="Bottomwear">Bottomwear</option>
             <option value="Winterwear">Winterwear</option>
           </select>
-        </div>
+        </div> */}
 
         <div>
           <p className="mb-2">Product Price</p>
@@ -188,16 +188,16 @@ const Add = ({ token }) => {
           <div
             onClick={() =>
               setSizes((prev) =>
-                prev.includes("S")
-                  ? prev.filter((item) => item !== "S")
-                  : [...prev, "S"]
+                prev.includes("1kg")
+                  ? prev.filter((item) => item !== "1kg")
+                  : [...prev, "1kg"]
               )
             }
             className="cursor-pointer"
           >
             <p
               className={`${
-                sizes.includes("S") ? "bg-orange-200" : "bg-slate-200"
+                sizes.includes("1kg") ? "bg-orange-200" : "bg-slate-200"
               } px-3 py-1 cursor-pointer`}
             >
               1kg
@@ -206,15 +206,15 @@ const Add = ({ token }) => {
           <div
             onClick={() =>
               setSizes((prev) =>
-                prev.includes("M")
-                  ? prev.filter((item) => item !== "M")
-                  : [...prev, "M"]
+                prev.includes("5kg")
+                  ? prev.filter((item) => item !== "5kg")
+                  : [...prev, "5kg"]
               )
             }
           >
             <p
               className={`${
-                sizes.includes("M") ? "bg-orange-200" : "bg-slate-200"
+                sizes.includes("5kg") ? "bg-orange-200" : "bg-slate-200"
               } px-3 py-1 cursor-pointer`}
             >
               5kg
@@ -223,15 +223,15 @@ const Add = ({ token }) => {
           <div
             onClick={() =>
               setSizes((prev) =>
-                prev.includes("L")
-                  ? prev.filter((item) => item !== "L")
-                  : [...prev, "L"]
+                prev.includes("40kg")
+                  ? prev.filter((item) => item !== "40kgL")
+                  : [...prev, "40kg"]
               )
             }
           >
             <p
               className={`${
-                sizes.includes("L") ? "bg-orange-200" : "bg-slate-200"
+                sizes.includes("40kg") ? "bg-orange-200" : "bg-slate-200"
               } px-3 py-1 cursor-pointer`}
             >
               40kg
@@ -240,15 +240,15 @@ const Add = ({ token }) => {
           <div
             onClick={() =>
               setSizes((prev) =>
-                prev.includes("XL")
-                  ? prev.filter((item) => item !== "XL")
-                  : [...prev, "XL"]
+                prev.includes("50kg")
+                  ? prev.filter((item) => item !== "50kg")
+                  : [...prev, "50kg"]
               )
             }
           >
             <p
               className={`${
-                sizes.includes("XL") ? "bg-orange-200" : "bg-slate-200"
+                sizes.includes("50kg") ? "bg-orange-200" : "bg-slate-200"
               } px-3 py-1 cursor-pointer`}
             >
               50kg
