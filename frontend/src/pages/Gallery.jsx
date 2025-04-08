@@ -64,7 +64,7 @@ const Gallery = () => {
   return (
     <>
     <div className="text-center text-2xl pt-10 border-t">
-    <Title text1={"OUR"} text2={"GALLERY"} />
+    <Title text1={"OUR"} text2={"GALLERYY"} />
     </div>
      
     <div className="p-6 md:p-10 bg-gradient-to-br from-green-50 to-white text-gray-800">
